@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './App.css';
+import './components/node-renderer-default.css';
+import './components/tree-node.css';
+import './components/react-sortable-tree.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
