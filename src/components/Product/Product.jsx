@@ -65,11 +65,15 @@ export default class Benchmark extends Component {
     }));
   };
 
+  treeChangeHandler = value => {
+    this.setState({ product: value });
+  };
+
   render() {
     return (
       <SortableTree
         treeData={this.state.product}
-        onChange={product => this.setState({ product })}
+        onChange={this.treeChangeHandler}
         generateNodeProps={({ node, path }) => {
           return {
             title: (
@@ -93,7 +97,6 @@ export default class Benchmark extends Component {
             ],
           };
         }}
-        scaffoldBlockPxWidth={24}
       />
     );
   }
